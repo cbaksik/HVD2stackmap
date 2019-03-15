@@ -1,0 +1,251 @@
+#printView {
+    padding-top:0px;
+    padding-left:0px;
+}
+
+
+#printView  prm-topbar {
+    display: none;
+}
+
+#printView #customTopMenu {
+    display: none;
+}
+
+#printView prm-search-bar {
+    display: none;
+}
+
+#printView  #virtualBrowse {
+    display: none;
+}
+
+#printView  #action_list {
+    display: none;
+}
+
+
+#printView  .pin-button {
+    display: none;
+}
+
+#printView  md-content {
+    padding:0px;
+    margin:0px;
+}
+
+#printView  #services-index {
+    display: none;
+}
+
+#printView .full-view-section {
+    padding:0px;
+    margin:0px;
+}
+
+#printView .full-view-section-content {
+    padding-left:10px;
+    margin-left:10px;
+    padding-right:10px;
+}
+
+#printView .full-view-inner-container {
+    margin:0px;
+    padding:0px;
+}
+
+#printView  #lcs_slide_out-10171 {
+    display:none;
+}
+
+#printView #tags {
+    display: none;
+}
+
+#printView #getit_link2 {
+    display: none;
+}
+
+#printView md-toolbar {
+    display: none;
+}
+
+
+@media only print {
+    body {
+        background:#ffffff;
+        padding:0px;
+        margin:0px;    
+        display:block;
+        overflow:visible;
+    }
+/* to resolve FF printing problems */
+    .layout-row, .layout-gt-sm, .layout-gt-sm-column, .layout-gt-sm-row, .layout-column {
+        display:block;
+        overflow:visible;
+    } 
+    md-content {
+        display:block;
+        overflow:visible;
+    }    
+    .full-view-container {
+        display:block;
+        overflow:visible;        
+    }
+/* end to resolve FF printing problems */
+    #closebtn {
+        display: none;
+    }
+
+    #customTopMenu {
+        display: none;
+    }
+
+    #fullView .full-view-section-content {
+        padding-left:10px;
+        margin-left:10px;
+        padding-right:10px;
+    }
+
+    #fullView .layout-row {
+        margin-bottom:10px;
+    }
+
+    #fullView prm-service-details {
+        padding-bottom:10px;
+        margin-bottom:10px;
+        padding-right:10px;
+    }
+
+    prm-topbar {
+        display: none;
+    }
+
+    prm-search-bar {
+        display: none;
+    }
+
+    prm-alert-bar {
+        display: none;
+    }
+
+    #fullView #virtualBrowse {
+        display: none;
+    }
+
+    #fullView #action_list {
+        display: none;
+    }
+
+
+    #fullView .pin-button {
+        display: none;
+    }
+
+    #fullView md-content {
+        padding:0px;
+        margin:0px;
+    }
+
+    #fullView #services-index {
+        display: none;
+    }
+
+    #fullView .full-view-section {
+        padding:0px;
+        margin:0px;
+    }
+
+    #fullView .full-view-section-content {
+        padding-left:10px;
+        margin-left:10px;
+        padding-right:10px;
+    }
+
+    #fullView .full-view-inner-container {
+        margin:0px;
+        padding:0px;
+        background:#FFFFFF;
+    }
+
+    #full-view-container {
+        margin:0px;
+        padding:0px;
+    }
+
+    #lcs_slide_out-10171 {
+        display:none;
+    }
+
+    prm-back-to-search-results-button {
+        display: none;
+    }
+
+    #fullView #tags {
+        display: none;
+    }
+
+    #fullView #getit_link2 {
+        display: none;
+    }
+
+    .padded-container {
+        padding:0px;
+        margin:0px;
+    }
+
+    .md-dialog-container {
+        margin:0px;
+        padding:0px;
+    }
+
+    md-toolbar {
+        display: none;
+    }
+
+    .hvfullsize {
+        background:#FFFFFF;
+    }
+
+    md-grid-tile {
+        background:#FFFFFF;
+    }
+
+    #links {
+        display: none;
+    }
+    .flex-lgPlus-15, .layout-row>.flex-lgPlus-15 {
+        max-width:1%;
+      }
+    md-content {
+        overflow:visible;
+        display:block;
+        position:absolute;
+
+    }
+    prm-search-result-list {
+        display:block;
+    }
+    prm-search-result-list .layout-row{
+        display:block;
+    }    
+    prm-search-result-thumbnail-container {
+       display:none;
+    }
+    #facets {
+        display:none;
+    }
+    prm-page-nav-menu {
+        display:none;
+    }
+    prm-account-overview md-tabs-wrapper {
+        display:none;
+    }
+    prm-account-overview md-tabs-canvas {
+        display:none;
+    }    
+    prm-account-overview md-list-item {
+        display:block;
+    }
+
+}

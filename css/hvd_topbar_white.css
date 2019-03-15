@@ -1,0 +1,196 @@
+.hollisPlus {
+    display: table-cell;
+}
+
+.boxHollis {
+    padding-top:8px;
+    margin-left:34px;
+    white-space: nowrap;
+}
+
+#hlLogoHeader {
+    cursor: pointer;
+    display: block;
+}
+
+#hlLogoHeader:hover {
+   text-decoration: none;
+   background: transparent;
+}
+
+.objectTag {
+    cursor: pointer;
+    pointer-events: none;
+    z-index: -1;
+    max-height:100%;
+    width:110px;
+    height: 75px;
+    margin-top:10px;
+}
+
+
+/*
+.hollisPlus prm-logo .logo-image, prm-logo img {
+    max-height: 100%;
+    height: 75px;
+    width: 110px;
+    margin-top: 10px;
+}
+*/
+
+prm-main-menu[menu-type=menu] .top-nav-bar-links .md-button.button-over-dark {
+    color:#000;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+prm-topbar #more-links-button prm-icon {
+    color:#000;
+
+}
+prm-main-menu .buttons-group .md-button {
+    box-shadow:none;
+}
+prm-main-menu .buttons-group .md-button:first-child {
+    box-shadow:none;
+}
+.buttons-group .md-button:first-child {
+    box-shadow:none;
+}
+.betaIcon {
+    display: table-cell;
+}
+
+.betaIcon > img {
+    width:33px;
+    height:auto;
+    padding-bottom:10px;
+}
+
+.topMenu {
+    background:#ffffff;
+    color: #000000 !important;
+    height:50px;
+}
+
+.hollisLogo {
+    margin-bottom:-5px;
+}
+
+
+prm-topbar {
+    height: 68px;
+    background-color:#000000;
+}
+
+prm-topbar > div.top-nav-bar {
+    background-color:#ffffff;
+}
+.prm-topbar .md-button .md-button.button-over-dark {
+    color:#000;
+}
+
+#hollisLogoTopbar {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+#hollisLogoTopbar a {
+    color:#000;
+    font-family:"Trueno";
+    font-size:42px;
+}
+
+.customTopMenu {
+    position: absolute;
+    top:-50px;
+    width:100%;
+    height:50px;
+    line-height:50px;
+}
+
+.customMenu {
+    text-align: right;
+}
+
+.customMenu a {
+    margin-right:15px;
+}
+
+.paddingleft15 {
+    padding-left:15px;
+}
+
+.paddingleft35 {
+    padding-left:35px;
+}
+
+
+.marginRight20 {
+    margin-right:20px;
+}
+
+
+div.search-actions > .md-button.button-confirm:hover {
+    color:#a51c30;
+}
+
+.hv-menu {
+    color:#000000;
+    padding:5px;
+}
+
+.hv-menu:hover {
+    color:#000000;
+}
+/* hide switch to adv search from basic, b/c in top bar now */
+.search-switch-buttons .switch-to-advanced {
+    display:none;
+}
+prm-search-bookmark-filter .md-button {
+    background-color:#44707b;
+}
+prm-user-area .md-button.user-menu-button {
+    color:#000;
+}
+prm-user-area .user-menu-button .user-name {
+    color:#026DB9;
+}
+.md-button:hover:not([disabled]), .md-button.button-over-dark:hover:not([disabled]) {
+    /*background-color:#3d6e94;*/
+    color:#0579b8;
+}
+prm-search-bookmark-filter .fixed-to-top #favorites-button {
+    color:#fff;
+}
+/* new for August release */
+prm-user-area-expandable {
+    background-color: rgba(58,58,58,.12);
+}
+prm-user-area-expandable .md-button {
+    color:#026DB9;
+    font-weight:600;
+    font-size: 1em;
+    border-left: white solid 1px;
+}
+prm-user-area-expandable .md-button.user-button {
+    color: #026DB9;
+}
+.md-button.button-with-menu-arrow .menu-arrow:after {
+    top:-20px;
+    display:inline-block;
+    position: inherit;
+}
+/* bar that takes over when you click sign in (might not be relevant after Aug '18 release */
+prm-user-area md-fab-toolbar.md-is-open md-fab-trigger .md-fab-toolbar-background, prm-user-area md-fab-toolbar.md-is-open md-fab-trigger ._md-fab-toolbar-background {
+    background-color:#fff !important;
+}
+prm-user-area .md-fab-action-item {
+    background-color:#0579b8;
+}
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button,  prm-user-area md-fab-toolbar .md-fab-action-item md-input-container, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container md-select {
+    /*color:#44707b;*/
+    font-weight:600;
+}
+/* bar that takes over when you click sign in */

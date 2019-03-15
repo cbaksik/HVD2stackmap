@@ -1,0 +1,58 @@
+#smsList {
+    width:100%;
+    height: auto;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+
+#smsList .textsms-row {
+    background:#f3f3f3 ;
+    margin-bottom:10px;
+    padding-left:10px;
+    cursor: pointer;
+    font-size:110%;
+}
+
+#smsList .textsms-row:hover {
+    background: #86adcc;
+    color:#ffffff;
+}
+
+#smsList .textsms-row-visited {
+    background: #86adcc;
+    padding-left:10px;
+    color:#ffffff;
+}
+
+
+#smsList .textsms-padding {
+    padding:10px;
+}
+
+#smsList .textsms-link {
+    color:#000000;
+}
+
+#smsList .textsms-link:hover {
+    color:#ffffff;
+}
+
+#smsList .textsms-row-visited  a.textsms-link {
+    color: #ffffff;
+}
+
+
+#smsList  .textsms-alert {
+    color:#ff0000;
+    padding:5px;
+}
+
+#smsList .textsms-iconColor {
+    color:#ffffff !important;
+    background:#e1e1e1 !important;
+}
+
+#smsList .textsms-info {
+    color: #32709A;
+}
