@@ -3,6 +3,8 @@
  * It remove old logo and replace it with new logo
  */
 
+(function(){
+
 angular.module('viewCustom')
     .controller('prmLogoAfterCtrl',[function () {
         var vm=this;
@@ -17,5 +19,10 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'prmLogoAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-logo-after.html'
+        templateUrl:['customConfig', (config) => {
+            return '/primo-explore/custom/' + config.vid + '/html/prm-logo-after.html';
+        }]
+
     });
+
+})();

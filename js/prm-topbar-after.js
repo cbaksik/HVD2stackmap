@@ -42,7 +42,9 @@
         bindings:{parentCtrl:'<'},
         controller: 'prmTopbarAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-topbar-after.html'
+        templateUrl: ['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/prm-topbar-after.html';
+        }]
     });
 
 })();

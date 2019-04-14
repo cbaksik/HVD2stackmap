@@ -3,9 +3,10 @@
  */
 
 
+(function(){
 
-angular.module('viewCustom')
-    .controller('customBarcodeCtrl',['customService','$stateParams','$scope',function (customService, $stateParams,$scope) {
+    angular.module('viewCustom')
+    .controller('customBarcodeCtrl',['customConfig','customService','$stateParams','$scope',function (config, customService, $stateParams,$scope) {
         var vm=this;
         vm.result={}; // store data from alma
         vm.item={}; // store data from pnx
@@ -16,8 +17,8 @@ angular.module('viewCustom')
 
         // get relative path rest end point url
         vm.getUrl=function () {
-          var config=cs.getEnv();
-          cs.getAjax('/primo-explore/custom/HVD2/html/'+config,'','get')
+          var configfile=cs.getEnv();
+          cs.getAjax('/primo-explore/custom/' + config.vid + '/html/'+configfile,'','get')
               .then(function (result) {
                     if(result.data) {
                         vm.almaBarcodeUrl=result.data.almaBarcodeUrl;
@@ -91,5 +92,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'customBarcodeCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-barcode.html'
+        templateUrl:['customConfig', (config) => {
+          return '/primo-explore/custom/'+ config.vid + '/html/custom-barcode.html';
+        }]
     });
+
+})();

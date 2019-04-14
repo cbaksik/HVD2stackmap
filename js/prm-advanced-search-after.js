@@ -2,6 +2,8 @@
  * Created by samsan on 8/28/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .controller('prmAdvancedSearchAfterCtrl',['$location','$stateParams','$element','$compile','$scope',function ($location,$stateParams,$element,$compile,$scope) {
         var vm=this;
@@ -55,22 +57,13 @@ angular.module('viewCustom')
     }]);
 
 angular.module('viewCustom')
-    .config(function ($stateProvider) {
-        $stateProvider
-            .state('exploreMain.barcode', {
-                    url: '/barcode/:code',
-                    views:{
-                        '': {
-                            template: `<custom-barcode parent-ctrl="$ctrl"></custom-barcode>`
-                        }
-                    }
-                }
-
-            )
-    })
     .component('prmAdvancedSearchAfter',{
         bindings:{parentCtrl:'<'},
         controller: 'prmAdvancedSearchAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-advanced-search-after.html'
+        templateUrl:['customConfig', (config) => {
+         return '/primo-explore/custom/' + config.vid + '/html/prm-advanced-search-after.html';
+        }]
     });
+
+})();

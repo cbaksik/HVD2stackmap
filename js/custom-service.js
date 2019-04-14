@@ -3,21 +3,25 @@
  * This is a service component and use to store data, get data, ajax call, compare any logic.
  */
 
-angular.module('viewCustom')
-    .service('customService',['$http','$sce','$window',function ($http, $sce,$window) {
-        var serviceObj={};
+(function(){
 
+angular.module('viewCustom')
+    .service('customService',['$http','$sce','$window', 'customConfig',function ($http, $sce,$window, config) {
+        var serviceObj={};
+        let configdata = config;
         // get environment to run config.html
         serviceObj.getEnv=function () {
             var host = $window.location.hostname;
-            var config='config-prod.html';
-            if(host.toLowerCase()==='localhost'){
-                config='config-local.html';
-            } else if(host.toLowerCase()==='harvard-primoalma-stage.hosted.exlibrisgroup.com'||host.toLowerCase()==='qa.hollis.harvard.edu') {
-                config='config-dev.html';
+            var configfile='config-prod.html';
+            if(host.toLowerCase()=== configdata.env.local){
+                configfile='config-local.html';
+            } else if(host.toLowerCase()=== configdata.env.dev) {
+                configfile='config-dev.html';
+            } else if(host.toLowerCase()=== configdata.env.qa) {
+                configfile='config-dev.html';
             }
 
-            return config;
+            return configfile;
         };
 
         serviceObj.getAjax=function (url,param,methodType) {
@@ -269,5 +273,17 @@ angular.module('viewCustom')
             return serviceObj.advancedSearch;
         };
 
+        // store stackmap config
+        serviceObj.stackmapapi = {};
+        serviceObj.setStackMapApi = (data)=> {
+           serviceObj.stackmapapi = data;
+        };
+
+        serviceObj.getStackMapApi = () => {
+            return serviceObj.stackmapapi;
+        };
+
         return serviceObj;
     }]);
+
+})();

@@ -18,7 +18,9 @@
             bindings:{parentCtrl:'<'},
             controller: 'prmFullViewServiceContainerAfterCtrl',
             controllerAs:'vm',
-            templateUrl:'/primo-explore/custom/HVD2/html/prm-full-view-service-container-after.html'
+            templateUrl:['customConfig',(config)=> {
+              return '/primo-explore/custom/'+config.vid+'/html/prm-full-view-service-container-after.html';
+            }]
         });
 
 })();

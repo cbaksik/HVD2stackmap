@@ -1,0 +1,69 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/prm-authentication-after-compiled.js" />
+        <item url="file://$PROJECT_DIR$/js/custom-compiled.js" />
+        <item url="file://$PROJECT_DIR$/js/custom-view-component-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-sms-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-barcode-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-logo-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-thumbnail-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-view-all-component-metadata-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-view-online-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-print-page-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/responsiveImage-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-service-links-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-library-map-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-topbar-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-print-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-service-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/singleImage-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-radio-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-scanned-key-content-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-advanced-search-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/mutipleThumbnail-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-action-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-permalink-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-search-result-availability-line-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-header-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-brief-result-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-full-view-service-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-sms-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-barcode-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-logo-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-thumbnail-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-view-all-component-metadata-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-view-online-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-print-page-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/responsiveImage-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-service-links-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-library-map-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-topbar-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-print-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-service-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/singleImage-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-radio-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-scanned-key-content-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-advanced-search-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/mutipleThumbnail-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-action-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-permalink-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-search-result-availability-line-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-header-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-brief-result-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-full-view-service-container-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/prm-authentication-after-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/custom-view-component-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -6,7 +6,7 @@
 (function () {
 
     angular.module('viewCustom')
-    .config(function ($stateProvider) {
+    .config(['$stateProvider',function ($stateProvider) {
         $stateProvider
             .state('exploreMain.almaMapIt', {
                     url: '/almaMapIt',
@@ -57,7 +57,27 @@
                 }
 
             )
-    });
+            .state('exploreMain.barcode', {
+                url: '/barcode/:code',
+                views:{
+                    '': {
+                            template: `<custom-barcode parent-ctrl="$ctrl"></custom-barcode>`
+                        }
+                    }
+                }
+
+            )
+            .state('exploreMain.stackmap', {
+                    url: '/stackmap/:location/:library',
+                    views:{
+                        '': {
+                            template: `<stackmap-page parent-ctrl="$ctrl"></stackmap-page>`
+                        }
+                    }
+                }
+
+            )
+    }]);
 
 
 })();

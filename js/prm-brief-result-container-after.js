@@ -12,6 +12,9 @@
         vm.cssClass='marginLeftFindingAid';
         vm.findingAid={'displayLabel':'','linkURL':'','newLinkURL':''};
         vm.$onInit=()=>{
+
+            console.log('*** I am here now ***');
+            console.log(vm);
             // get links data from primo parent-ctrl binding data
             $scope.$watch('vm.parentCtrl.links',()=>{
                 // find $$Elinktofa
@@ -51,7 +54,9 @@
         bindings:{parentCtrl:'<'},
         controller: 'prmBriefResultContainerAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-brief-result-container-after.html'
+        templateUrl:['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/prm-brief-result-container-after.html';
+        }]
     });
 
 })();

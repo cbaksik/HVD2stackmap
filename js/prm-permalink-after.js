@@ -2,6 +2,8 @@
  * Created by samsan on 9/18/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .controller('prmPermalinkAfterCtrl',['$scope','$sce','$element',function ($scope,$sce,$element) {
         var vm=this;
@@ -52,5 +54,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'prmPermalinkAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-permalink-after.html'
+        templateUrl: ['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/prm-permalink-after.html';
+        }]
     });
+
+})();

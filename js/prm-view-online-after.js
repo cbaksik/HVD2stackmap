@@ -108,7 +108,9 @@
     .component('prmViewOnlineAfter', {
         bindings: {parentCtrl: '<'},
         controller: 'prmViewOnlineAfterController',
-        'templateUrl':'/primo-explore/custom/HVD2/html/prm-view-online-after.html'
+        'templateUrl': ['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/prm-view-online-after.html';
+        }]
     });
 
 })();

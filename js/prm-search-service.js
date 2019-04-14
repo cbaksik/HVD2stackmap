@@ -3,6 +3,8 @@
  * This custom service use to inject to the controller.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .service('prmSearchService',['$http','$window','$filter',function ($http, $window, $filter) {
     let serviceObj={};
@@ -299,3 +301,5 @@ angular.module('viewCustom')
     return serviceObj;
 
 }]);
+
+})();

@@ -3,6 +3,7 @@
  * This component is to create text sms icon by inserting it dynamic at prm-action-list-after.js
  */
 
+(function(){
 
 angular.module('viewCustom')
     .controller('customSmsCtrl',['customService',function (customService) {
@@ -22,5 +23,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'customSmsCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-sms.html'
+        templateUrl:['customConfig', (config) => {
+            return '/primo-explore/custom/'+config.vid+'/html/custom-sms.html';
+        }]
     });
+
+})();

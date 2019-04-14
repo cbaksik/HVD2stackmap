@@ -1,0 +1,13 @@
+#stackmappage {
+    padding:20px;
+}
+
+#stackmappage h1 {
+    font-family: "Trueno";
+    font-size: 42px;
+    font-weight:400;
+}
+
+#stackmappage .space {
+    margin-bottom:15px;
+}

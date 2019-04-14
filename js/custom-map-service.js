@@ -2,6 +2,8 @@
  * Created by samsan on 9/13/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .service('customMapService',[function () {
         var serviceObj={};
@@ -54,3 +56,4 @@ angular.module('viewCustom')
         return serviceObj;
     }]);
 
+})();

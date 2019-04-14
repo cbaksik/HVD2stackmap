@@ -3,6 +3,8 @@
  * This component is for a single image full display when a user click on thumbnail from a full display page
  */
 
+(function(){
+
 angular.module('viewCustom')
     .controller('customViewComponentController', [ '$sce','$mdMedia','prmSearchService','$location','$stateParams', '$element','$timeout','customMapXmlKeys','$window','customMapXmlValues', function ($sce,$mdMedia,prmSearchService,$location,$stateParams, $element, $timeout, customMapXmlKeys,$window, customMapXmlValues) {
 
@@ -249,7 +251,9 @@ angular.module('viewCustom')
         bindings: {item: '<',services:'<',params:'<',parentCtrl:'<'},
         controller: 'customViewComponentController',
         controllerAs:'vm',
-        'templateUrl':'/primo-explore/custom/HVD2/html/custom-view-component.html'
+        'templateUrl': ['customConfig', (config)=> {
+          return '/primo-explore/custom/'+config.vid+'/html/custom-view-component.html';
+        }]
     });
 
 // truncate word to limit 60 characters
@@ -261,3 +265,5 @@ angular.module('viewCustom').filter('mapXmlFilter',['customMapXmlKeys',function 
     }
 
 }]);
+
+})();

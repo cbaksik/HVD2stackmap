@@ -2,9 +2,10 @@
  * Created by samsan on 9/13/17.
  */
 
+(function(){
 
 angular.module('viewCustom')
-    .controller('prmSearchResultAvailabilityLineAfterCtrl',['customMapService','$timeout','customHathiTrustService','customService','customGoogleAnalytic','$q','prmSearchService',function (customMapService,$timeout, customHathiTrustService,customService, customGoogleAnalytic, $q, prmSearchService) {
+    .controller('prmSearchResultAvailabilityLineAfterCtrl',['customMapService','$timeout','customHathiTrustService','customService','customGoogleAnalytic','$q','prmSearchService','customConfig',function (customMapService,$timeout, customHathiTrustService,customService, customGoogleAnalytic, $q, prmSearchService, config) {
         var vm=this;
         var cga=customGoogleAnalytic;
         var custService=customService;
@@ -150,7 +151,7 @@ angular.module('viewCustom')
                             zoomInTitle: 'Zoom in',
                             zoomOutText: '<i class="iconMapFontSize">-</i>',
                             zoomOutTitle: 'Zoom out',
-                            zoomHomeText: '<img class="iconHome" src="/primo-explore/custom/HVD2/img/ic_home_black_18px.svg"/>',
+                            zoomHomeText: '<img class="iconHome" src="/primo-explore/custom/'+config.vid+'/img/ic_home_black_18px.svg"/>',
                             zoomHomeTitle: 'Zoom home'
                         },
 
@@ -263,5 +264,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'prmSearchResultAvailabilityLineAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-search-result-availability-line-after.html'
+        templateUrl: ['customConfig', (config) => {
+          return '/primo-explore/custom/'+config.vid+'/html/prm-search-result-availability-line-after.html';
+        }]
     });
+
+})();

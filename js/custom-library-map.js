@@ -3,6 +3,7 @@
  * Create Map it link, place icon, and display the library name
  */
 
+(function(){
 angular.module('viewCustom')
     .controller('customLibraryMapCtrl',['customService','$window','$location','$scope','$sce',function (customService, $window, $location,$scope, $sce) {
         var vm=this;
@@ -13,6 +14,7 @@ angular.module('viewCustom')
 
         vm.getMapIt=function () {
             vm.api=sv.getApi();
+
             if(vm.api.mapUrl) {
                 let url = vm.api.mapUrl + '/' + vm.params.library;
                 url += '/' + vm.params.location + '?callNumber=' + encodeURI(vm.params.callnum);
@@ -51,7 +53,9 @@ angular.module('viewCustom')
         bindings:{loc:'<'},
         controller: 'customLibraryMapCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-library-map.html'
+        templateUrl:['customConfig', (config) => {
+          return '/primo-explore/custom/HVD2/' + config.vid + '/custom-library-map.html';
+        }]
     });
 
 
@@ -102,3 +106,5 @@ angular.module('viewCustom').filter('mapFilterUrl',['$sce',function ($sce) {
     }
 
 }]);
+
+})();

@@ -1,0 +1,10 @@
+<div id="stackmappage">
+    <h1>HOLLIS Stack Map</h1>
+    <div>{{vm.title}}</div>
+    <div class="space">{{vm.library}}, {{vm.location}}, {{vm.callno}}</div>
+    <div class="space" ng-repeat="m in vm.stackmapdata.maps">
+        <div>
+            <img src="{{m.mapurl}}"/>
+        </div>
+    </div>
+</div>

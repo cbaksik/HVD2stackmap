@@ -2,6 +2,8 @@
  * Created by samsan on 9/22/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .service('customGoogleAnalytic',['$timeout',function ($timeout) {
        let svObj={};
@@ -31,4 +33,4 @@ angular.module('viewCustom')
         return svObj;
     }]);
 
-
+})();

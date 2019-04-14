@@ -1,0 +1,11 @@
+<div ng-if="vm.stackmapdata.maps">
+<button ng-click="vm.openMap()" class="stackmap-button" title="Library map location">
+  <a ng-click="vm.openMap()">
+    <i class="fa fa-map-marker searchIcon"></i> Map it :
+    <span ng-repeat="m in vm.stackmapdata.maps track by $index">
+    {{m.library}} {{m.floorname}}
+      <span ng-repeat="r in m.ranges">{{r.label}}</span>
+    </span>
+  </a>
+</button>
+</div>

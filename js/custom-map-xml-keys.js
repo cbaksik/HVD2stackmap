@@ -2,6 +2,8 @@
  * Created by samsan on 9/28/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .service('customMapXmlKeys',[function () {
         var serviceObj={};
@@ -148,3 +150,4 @@ angular.module('viewCustom')
 
         return serviceObj;
     }]);
+})();

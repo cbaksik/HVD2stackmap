@@ -2,6 +2,7 @@
  * Created by samsan on 8/16/17.
  */
 
+(function(){
 
 angular.module('viewCustom')
     .controller('prmActionContainerAfterCtrl',['customService','prmSearchService','$window','customGoogleAnalytic','$scope',function (customService,prmSearchService,$window, customGoogleAnalytic, $scope) {
@@ -194,5 +195,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'prmActionContainerAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-action-container-after.html'
+        templateUrl:['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/prm-action-container-after.html';
+        }]
     });
+
+})();

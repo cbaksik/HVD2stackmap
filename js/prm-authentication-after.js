@@ -2,17 +2,37 @@
  * Created by samsan on 8/7/17.
  */
 
+(function(){
+
 angular.module('viewCustom')
-    .controller('prmAuthenticationAfterController', ['customService','prmSearchService', function (customService, prmSearchService) {
+    .controller('prmAuthenticationAfterController', ['customService','prmSearchService','customConfig', function (customService, prmSearchService, config) {
         let vm=this;
         let psv = prmSearchService;
+        let svconfig = config;
         // initialize custom service search
         let sv=customService;
         vm.api={};
+        vm.stackmapapi = {};
+        // get rest stackmap config
+        vm.getStackMapConfig=function () {
+            var config = sv.getEnv();
+            sv.getAjax('/primo-explore/custom/'+svconfig.vid+'/html/stackmap-config.html','','get')
+                .then(function (res) {
+                        vm.stackmapapi=res.data;
+                        sv.setStackMapApi(res.data);
+                        console.log('*** stackmapapi ***');
+                        console.log(res);
+                        console.log(vm.stackmapapi);
+                    },
+                    function (error) {
+                        console.log(error);
+                    }
+                )
+        };
         // get rest endpoint Url
         vm.getUrl=function () {
-            var config = sv.getEnv();
-            sv.getAjax('/primo-explore/custom/HVD2/html/' + config,'','get')
+            var configfile = sv.getEnv();
+            sv.getAjax('/primo-explore/custom/'+svconfig.vid+'/html/' + configfile,'','get')
                 .then(function (res) {
                         vm.api=res.data;
                         sv.setApi(vm.api);
@@ -62,6 +82,8 @@ angular.module('viewCustom')
         };
 
         vm.$onInit=()=>{
+            // get stackmap api endpoint url
+            vm.getStackMapConfig();
             // get primo service endpoint urls
             vm.getUrl();
         };
@@ -84,3 +106,5 @@ angular.module('viewCustom')
         bindings: {parentCtrl: '<'},
         controller: 'prmAuthenticationAfterController'
     });
+
+})();

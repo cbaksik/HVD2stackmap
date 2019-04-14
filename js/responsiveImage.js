@@ -4,16 +4,20 @@
  * It use to show a single image on the page. If the image does not exist, it use icon_image.png
  */
 
+(function(){
+
 angular.module('viewCustom')
     .component('responsiveImage', {
-        templateUrl:'/primo-explore/custom/HVD2/html/responsiveImage.html',
+        templateUrl: ['customConfig', (config) => {
+         return '/primo-explore/custom/'+config.vid+'/html/responsiveImage.html';
+        }],
         bindings: {
           src:'<',
           imgtitle: '<',
           restricted:'<'
         },
         controllerAs:'vm',
-        controller:['$element','$window','$location','prmSearchService','$timeout',function ($element,$window,$location,prmSearchService, $timeout) {
+        controller:['$element','$window','$location','prmSearchService','$timeout', 'customConfig',function ($element,$window,$location,prmSearchService, $timeout, config) {
             var vm=this;
             var sv=prmSearchService;
             // set up local scope variables
@@ -36,7 +40,7 @@ angular.module('viewCustom')
                         // use default image if it is a broken link image
                         var pattern = /^(onLoad\?)/; // the broken image start with onLoad
                         if(pattern.test(vm.src)) {
-                            img.src='/primo-explore/custom/HVD2/img/icon_image.png';
+                            img.src='/primo-explore/custom/'+config.vid+'/img/icon_image.png';
                         }
                         img.onload=vm.callback;
                         if(img.width > 50) {
@@ -79,3 +83,4 @@ angular.module('viewCustom')
 
         }]
     });
+})();

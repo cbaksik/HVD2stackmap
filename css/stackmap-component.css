@@ -1,0 +1,26 @@
+.stackmap-button {
+    background-color: #026DB9;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    padding:6px;
+    color: white;
+    border-width: 0px;
+    border-radius: 3px;
+    display: inline;
+    line-height: 1em;
+    cursor: pointer;
+}
+
+.stackmap-button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.stackmap-button:hover {
+    font-weight: bold;
+    background-color:#1C87D3;
+}
+
+button.SMsearchbtn {
+    display: none;
+}

@@ -3,6 +3,7 @@
  * This component will insert textsms and its icon into the action list
  */
 
+(function(){
 
 angular.module('viewCustom')
     .controller('prmActionListAfterCtrl',['$element','$compile','$scope','$timeout','customService',function ($element,$compile,$scope,$timeout, customService) {
@@ -59,3 +60,4 @@ angular.module('viewCustom')
         controllerAs:'vm'
     });
 
+})();

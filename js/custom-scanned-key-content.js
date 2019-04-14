@@ -38,7 +38,9 @@
         bindings:{item:'<'},
         controllerAs:'vm',
         controller: 'customScannedKeyContentCtrl',
-        templateUrl: '/primo-explore/custom/HVD2/html/custom-scanned-key-content.html'
+        templateUrl: ['customConfig', (config) => {
+            return '/primo-explore/custom/' + config.vid + '/html/custom-scanned-key-content.html';
+        }]
     });
 
 })();

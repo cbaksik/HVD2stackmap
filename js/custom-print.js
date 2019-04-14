@@ -22,7 +22,9 @@
         bindings:{parentCtrl:'<'},
         controller: 'customPrintCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-print.html'
+        templateUrl: ['customConfig', (config) => {
+            return '/primo-explore/custom/' + config.vid + '/html/custom-print.html';
+        }]
     });
 
 })();

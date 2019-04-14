@@ -40,7 +40,9 @@
         bindings:{parentCtrl:'<'},
         controller: 'prmServiceLinksAfterCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/prm-service-links-after.html'
+        templateUrl: ['customConfig', (config) => {
+         return '/primo-explore/custom/'+ config.vid+'/html/prm-service-links-after.html';
+        }]
     });
 
 })();

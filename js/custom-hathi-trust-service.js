@@ -2,7 +2,7 @@
  * Created by samsan on 9/20/17.
  */
 
-
+(function() {
 angular.module('viewCustom')
     .service('customHathiTrustService',['$http',function ($http) {
         var serviceObj={};
@@ -68,3 +68,4 @@ angular.module('viewCustom')
         return serviceObj;
     }]);
 
+})();

@@ -4,6 +4,8 @@
  */
 
 
+(function(){
+
 angular.module('viewCustom')
     .controller('customRadioCtrl',[function () {
         var vm=this;
@@ -30,6 +32,9 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'customRadioCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-radio.html'
+        templateUrl: ['customConfig', (config) => {
+          return '/primo-explore/custom/' + config.vid + '/html/custom-radio.html';
+        }]
     });
 
+})();

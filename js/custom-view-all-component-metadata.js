@@ -2,6 +2,7 @@
  * Created by samsan on 7/17/17.
  */
 
+(function(){
 angular.module('viewCustom')
     .controller('customViewAllComponentMetadataController', [ '$sce','$element','$location','prmSearchService','$window','$stateParams','$timeout','customMapXmlKeys','$mdMedia','customMapXmlValues', function ($sce, $element,$location, prmSearchService, $window, $stateParams, $timeout, customMapXmlKeys, $mdMedia, customMapXmlValues) {
 
@@ -134,6 +135,9 @@ angular.module('viewCustom')
         bindings: {parentCtrl: '<'},
         controller: 'customViewAllComponentMetadataController',
         controllerAs:'vm',
-        'templateUrl':'/primo-explore/custom/HVD2/html/custom-view-all-component-metadata.html'
+        'templateUrl': ['customConfig', (config)=> {
+            return '/primo-explore/custom/' + config.vid + '/html/custom-view-all-component-metadata.html';
+        }]
     });
 
+})();

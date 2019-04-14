@@ -5,6 +5,8 @@
  * aeon test url = https://aeontest.hul.harvard.edu/logon?action=10&form=30&sid=Via AEON
  */
 
+(function(){
+
 angular.module('viewCustom')
     .controller('customAeonCtrl',['customService','$scope','$stateParams',function (customService, $scope, $stateParams) {
         var sv=customService;
@@ -134,5 +136,11 @@ angular.module('viewCustom')
         bindings:{parentCtrl:'<'},
         controller: 'customAeonCtrl',
         controllerAs:'vm',
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-aeon.html'
+        templateUrl: ['customConfig', (config) => {
+            return '/primo-explore/custom/' + config.vid + '/html/custom-aeon.html';
+          }
+        ]
     });
+
+
+})();

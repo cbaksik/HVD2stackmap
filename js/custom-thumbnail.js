@@ -3,19 +3,23 @@
  * If image has height that is greater than 150 px, then it will resize it. Otherwise, it just display what it is.
  */
 
+(function(){
+
 angular.module('viewCustom')
     .component('customThumbnail', {
-        templateUrl:'/primo-explore/custom/HVD2/html/custom-thumbnail.html',
+        templateUrl: ['customConfig', (config) => {
+            return '/primo-explore/custom/'+config.vid+'/html/custom-thumbnail.html';
+        }],
         bindings: {
             itemdata:'<',
             searchdata: '<'
         },
         controllerAs:'vm',
-        controller:['$element','$timeout','prmSearchService',function ($element,$timeout,prmSearchService) {
+        controller:['$element','$timeout','prmSearchService', 'config',function ($element,$timeout,prmSearchService, config) {
             var vm=this;
             var sv=prmSearchService;
             vm.localScope={'imgclass':'','hideLockIcon':false,'hideTooltip':false};
-            vm.imageUrl='/primo-explore/custom/HVD2/img/icon_image.png';
+            vm.imageUrl='/primo-explore/custom/'+config.vid+'/img/icon_image.png';
             vm.src='';
             vm.imageCaption='';
             vm.restricted=false;
@@ -43,7 +47,7 @@ angular.module('viewCustom')
                         // use default image if it is a broken link image
                         var pattern = /^(onLoad\?)/; // the broken image start with onLoad
                         if(pattern.test(vm.src)) {
-                            img.src='/primo-explore/custom/HVD2/img/icon_image.png';
+                            img.src='/primo-explore/custom/'+config.vid+'/img/icon_image.png';
                         }
                         img.onload = vm.callback;
                         if(img.clientWidth > 50) {
@@ -76,3 +80,5 @@ angular.module('viewCustom')
 
         }]
     });
+
+})();
