@@ -1,3 +1,17 @@
+.action-list-content {
+   background: #ffffff;
+}
+
+.stackmap {
+    display: inline-block;
+    background: #ffffff;
+    padding-left:100px;
+    position: relative;
+    position: relative;
+    z-index: 10;
+    top: -10px;
+}
+
 .stackmap-button {
     background-color: #026DB9;
     font-family: "Source Sans Pro", Arial, sans-serif;

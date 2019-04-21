@@ -283,6 +283,46 @@ angular.module('viewCustom')
             return serviceObj.stackmapapi;
         };
 
+        // store library name
+        serviceObj.librarynames = {};
+        serviceObj.setLibraryNames = (data)=> {
+            serviceObj.librarynames = data;
+        };
+
+        serviceObj.getLibraryNames=()=>{
+            return serviceObj.librarynames;
+        };
+
+        serviceObj.decodeLibraryLocation=(label) => {
+            let libraryobj = {floor: '', location: '', row: ''};
+            if(label) {
+                let list = label.split('+');
+                if(list.length > 1) {
+                    let floor = list[0];
+                    let row = list[1];
+                    let location = '';
+                    let pattern = /[NEWS]/g; // direction north, east, west, south
+                    if(pattern.test(floor)) {
+                        if(floor.includes('E')) {
+                           location = 'East';
+                        }
+                        if(floor.includes('W')) {
+                            location = 'West';
+                        }
+                        if(floor.includes('N')) {
+                            location = 'North';
+                        }
+                        if(floor.includes('S')) {
+                            location = 'South';
+                        }
+                    }
+                    floor = floor.replace(pattern,'');
+                    libraryobj = {floor: floor, location: location, row: row};
+                }
+            }
+            return libraryobj;
+        };
+
         return serviceObj;
     }]);
 

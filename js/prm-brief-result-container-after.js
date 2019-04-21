@@ -12,9 +12,6 @@
         vm.cssClass='marginLeftFindingAid';
         vm.findingAid={'displayLabel':'','linkURL':'','newLinkURL':''};
         vm.$onInit=()=>{
-
-            console.log('*** I am here now ***');
-            console.log(vm);
             // get links data from primo parent-ctrl binding data
             $scope.$watch('vm.parentCtrl.links',()=>{
                 // find $$Elinktofa

@@ -13,8 +13,9 @@
                 "qa": "qa.hollis.harvard.edu",
                 "prod": ""
             },
-            //"stackmapurl": "https://harvard.stackmap.com/json"
-            "stackmapurl": "/primo-explore/custom/HVD2stackmap/html/stackmapapi-json-test.html"
+            //"stackmapurl": "https://harvard.stackmap.com/json",
+            "stackmapurl": "/primo-explore/custom/HVD2stackmap/html/stackmapapi-json-test.html",
+            "librarynameurl": "/html/library-name-jsondata.html"
         });
 
 })();

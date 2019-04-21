@@ -13,6 +13,7 @@ angular.module('viewCustom')
         let sv=customService;
         vm.api={};
         vm.stackmapapi = {};
+        vm.librarynames = [];
         // get rest stackmap config
         vm.getStackMapConfig=function () {
             var config = sv.getEnv();
@@ -23,6 +24,19 @@ angular.module('viewCustom')
                         console.log('*** stackmapapi ***');
                         console.log(res);
                         console.log(vm.stackmapapi);
+                    },
+                    function (error) {
+                        console.log(error);
+                    }
+                )
+        };
+        // get library name
+        vm.getLibraryName=function () {
+            var config = sv.getEnv();
+            sv.getAjax('/primo-explore/custom/'+svconfig.vid+'/html/library-name-jsondata.html','','get')
+                .then(function (res) {
+                        vm.librarynames=res.data;
+                        sv.setLibraryNames(res.data);
                     },
                     function (error) {
                         console.log(error);
@@ -82,6 +96,8 @@ angular.module('viewCustom')
         };
 
         vm.$onInit=()=>{
+            // get library name json data
+            vm.getLibraryName();
             // get stackmap api endpoint url
             vm.getStackMapConfig();
             // get primo service endpoint urls
